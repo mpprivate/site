@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilona <3</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <section id="password-form">
+
+        <div>
+            <h1>Mot de passe ?</h1>
+            <form id="access-form">
+                <input type="password" id="password" placeholder="Mot de passe" required>
+
+                <button type="submit">
+                    <span>Rentrer</span>
+                </button>
+            </form>
+        </div>
+
+    </section>
+
+    <section class = "question">
+
+        <div>
+        <p>Tu m'aimes ?</p>
+        <div>
+            <label>
+               <input type = "radio" name="love">   
+               <i class="fa fa-solid fa-check"></i>        
+            </label>
+
+            <label>
+                <input type = "radio" name="love">
+                <i class="fa fa-solid fa-xmark"></i>  
+            </label>
+        </div>
+
+    </section>
+
+    <section class = "gallery" id="gallery">
+        
+        <input type="radio" name="Photos" id="check1" checked>
+        <input type="radio" name="Photos" id="check2">
+        <input type="radio" name="Photos" id="check3">
+        <input type="radio" name="Photos" id="check4">
+        <input type="radio" name="Photos" id="check5">
+
+        <div class = "container">
+            <h1>Notre gallerie photo</h1>
+
+            <div class ="top-content">
+                <h3>Nos moments inoubliables</h3>
+                <label for="check1">Toutes les photos</label>
+                <label for="check2">Nous deux</label>
+                <label for="check3">Fofolle</label>
+                <label for="check4">Nos vacances</label>
+                <label for="check5">Best-Of</label>
+            </div>
+
+            <div class="photo-gallery">
+                <!--Nous deux-->
+                <div class="pic place">
+                    <img src="/images/deux/cheval.jpg"/>
+                </div>
+                <div class="pic place">
+                    <img src="/images/deux/concert.jpg"/>
+                </div>
+                <div class="pic place">
+                    <img src="/images/deux/langue.jpg"/>
+                </div>
+                <div class="pic place">
+                    <img src="/images/deux/pouce.jpg"/>
+                </div>
+                <div class="pic place">
+                    <img src="/images/deux/sape.jpg"/>
+                </div>
+                <div class="pic place">
+                    <img src="/images/deux/spa.jpg"/>
+                </div>
+                <div class="pic place">
+                    <img src="/images/deux/sushi.jpg"/>
+                </div>
+
+                <!--Fofolle-->
+                <div class="pic family">
+                    <img src="/images/fofolle/cache.jpg"/>
+                </div>
+                <div class="pic family">
+                    <img src="/images/fofolle/chapeau.jpg"/>
+                </div>
+                <div class="pic family">
+                    <img src="/images/fofolle/danse.jpg"/>
+                </div>
+                <div class="pic family">
+                    <img src="/images/fofolle/phoque.jpg"/>
+                </div>
+                <div class="pic family">
+                    <img src="/images/fofolle/sch.jpg"/>
+                </div>
+
+                <!--Vacances-->
+                <div class="pic vacances">
+                    <img src="/images/vacances/bisous.jpg"/>
+                </div>
+                <div class="pic vacances">
+                    <img src="/images/vacances/bleus.jpg"/>
+                </div>
+                <div class="pic vacances">
+                    <img src="/images/vacances/clc.jpg"/>
+                </div>
+                <div class="pic vacances">
+                    <img src="/images/vacances/dodo.jpg"/>
+                </div>
+                <div class="pic vacances">
+                    <img src="/images/vacances/manege.jpg"/>
+                </div>
+                <div class="pic vacances">
+                    <img src="/images/vacances/mouille.jpg"/>
+                </div>
+                <div class="pic vacances">
+                    <img src="/images/vacances/plage.jpg"/>
+                </div>
+                <div class="pic vacances">
+                    <img src="/images/vacances/sourir.jpg"/>
+                </div>
+                
+
+                <!--BestOf-->
+                <div class="pic bestof">
+                    <img src="/images/bestof/bite.jpg"/>
+                </div>
+                <div class="pic bestof">
+                    <img src="/images/bestof/dodo.jpg"/>
+                </div>
+                <div class="pic bestof">
+                    <img src="/images/bestof/entrecote.jpg"/>
+                </div>
+                <div class="pic bestof">
+                    <img src="/images/bestof/mimibite.jpg"/>
+                </div>
+                <div class="pic bestof">
+                    <img src="/images/bestof/puceau.jpg"/>
+                </div>
+                <div class="pic bestof">
+                    <img src="/images/bestof/slurp.jpg"/>
+                </div>
+                <div class="pic bestof">
+                    <img src="/images/bestof/tete.jpg"/>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="popup-container" id="popup-container">
+        <div class="popup-content">
+            <img src="" alt="Popup Image" id="popup-image">
+            <p id="popup-text">Your text here.</p>
+            <span class="close-button" onclick="closePopup()">❌</span>
+        </div>
+    </section>
+
+    <section class="blur-container" id="blur-container"></section>
+    
+    
+    <section class = "bot">
+        <div class="output">
+            <h1>
+                Voila maintenant
+                <span id="YY">--</span> ans
+                <span id="MM">--</span> mois
+                <span id="DD">--</span> jours
+                <span id="HH">--</span> heures
+                <span id="MIN">--</span> minutes
+                <span id="SS">--</span> secondes
+                que l'on s'aime ❤️
+            </h1>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!--https://www.youtube.com/watch?v=tLWaDbpw-LI -> carte glassmorphism-->
+<!--https://youtu.be/QghhoJBdw7A?si=Cy0EJ53Rz4VEeu-x&t=216 -> cartes-->
+<!--https://youtu.be/_LExTzOhe7s?si=-eu6BgVRhNf6HfHy&t=296 -> timer-->
