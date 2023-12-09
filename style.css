@@ -14,6 +14,15 @@ body {
     min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.body-no-scroll {
+    overflow: hidden;
+}
+
+
 /*PASSWORD FORM*/
 
 #password-form {
@@ -228,9 +237,13 @@ label:hover{
 .photo-gallery {
     width: 90%;
     margin: auto;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .pic{
@@ -270,6 +283,7 @@ label:hover{
     transition-delay: .2s;
     z-index: 1;
 }
+
 .pic::after{
     content: "";
     position: absolute;
@@ -385,11 +399,17 @@ label:hover{
     background-image: linear-gradient(#DAFFFB, white);
     background-color: rgba(255, 0, 0, 0.4);
     z-index: 10;
+    overflow: hidden;
+}
+
+.popup-content::-webkit-scrollbar {
+    display: none;
 }
 
 .popup-content {
     position: relative;
     background-color: rgba(4, 62, 104, 0.4);
+    backdrop-filter: blur(15px);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -404,6 +424,11 @@ label:hover{
     max-height: calc(80vh - 40px);
     margin-bottom: 20px;
 }
+
+.popup-text {
+    font-size:xx-large;
+}
+
 .close-button {
     position: absolute;
     top: 10px;
