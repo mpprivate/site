@@ -1,4 +1,4 @@
-const correctPassword = "a";
+const correctPassword = "petit ange";
 
 //Sections
 const passwordSection = document.getElementById("password-form");
@@ -114,23 +114,28 @@ document.addEventListener("DOMContentLoaded", function () {
     var popupText = document.getElementById("popup-text");
 
     gallery.addEventListener("click", function (event) {
-        var clickedImage = event.target.closest(".pic img");
+        var clickedImage = event.target.closest(".pic");
         if (clickedImage) {
-            var clickedImageSrc = clickedImage.src;
-            var clickedImageAlt = clickedImage.alt;
+            var clickedImageSrc = clickedImage.querySelector("img").src;
+            var clickedImageAlt = clickedImage.querySelector("img").alt;
+            var clickedImageText = clickedImage.getAttribute("data-text");
 
             popupImage.src = clickedImageSrc;
             popupImage.alt = clickedImageAlt;
-            popupText.textContent = "Your text for the clicked image.";
+            popupText.textContent = clickedImageText;
 
             popupContainer.style.display = "flex";
             blurContainer.style.display = "block";
+            gallery.classList.add("gallery-disabled");
+
+            document.body.classList.add("body-no-scroll");
         }
     });
 
     popupContainer.addEventListener("click", function (event) {
         if (event.target.classList.contains("popup-container")) {
             closePopup();
+            gallery.classList.remove("gallery-disabled");
         }
     });
 });
@@ -140,4 +145,6 @@ function closePopup() {
     var blurContainer = document.getElementById("blur-container");
     popupContainer.style.display = "none";
     blurContainer.style.display = "none";
+
+    document.body.classList.remove("body-no-scroll");
 }
